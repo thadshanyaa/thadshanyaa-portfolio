@@ -29,6 +29,7 @@ export const projects: Project[] = [
     description:
       'Developed a web-based Ocean View Resort Management System designed to support reservation handling, payment processing, reporting, and role-based dashboards.',
     technologies: ['Java', 'JSP', 'MySQL'],
+    repoUrl: 'https://github.com/thadshanyaa/Ocean_View_Resort',
     featured: true,
     previewImage: 'https://cdn.creativeclaw.co/u/237b5522/images/68a57647-49fb-476b-b708-ec7aefb978ea.jpg',
     previewImageAlt: 'Concept illustration of a resort management dashboard',
