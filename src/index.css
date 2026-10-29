@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+    background-color: #050816;
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-canvas font-sans text-fg antialiased;
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background: rgba(59, 130, 246, 0.35);
+    color: #f8fafc;
+  }
+
+  :focus-visible {
+    outline: 2px solid #22d3ee;
+    outline-offset: 3px;
+    border-radius: 8px;
+  }
+}
+
+@layer components {
+  /* Transparent glass panel */
+  .glass {
+    background: rgba(15, 23, 42, 0.58);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.22);
+  }
+
+  /* Denser glass for navigation and emphasis panels */
+  .glass-strong {
+    background: rgba(11, 18, 40, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+  }
+
+  .gradient-text {
+    background-image: linear-gradient(120deg, #60a5fa 0%, #3b82f6 45%, #22d3ee 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .section-label {
+    @apply inline-flex items-center gap-3 font-sans text-xs font-semibold uppercase tracking-[0.22em] text-brand-cyan;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-primary to-brand-electric px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_30px_-10px_rgba(37,99,235,0.8)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_36px_-8px_rgba(34,211,238,0.5)];
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-fg backdrop-blur-md transition duration-300 hover:-translate-y-0.5 hover:border-brand-cyan/50 hover:bg-white/[0.08];
+  }
+}
+
+/* Respect the reduced-motion preference for CSS animations and transitions */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
