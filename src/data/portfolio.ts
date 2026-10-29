@@ -49,7 +49,7 @@ export const profile = {
   phoneDisplay: '0742425048',
   /** International format for tel: links (Sri Lanka +94, leading 0 dropped). */
   phoneHref: '+94742425048',
-  portfolioUrl: 'https://thadshanyaa.github.io/Thadshanyaa-s-Portfolio/',
+  portfolioUrl: 'https://thadshanyaa-portfolio.vercel.app/',
   githubUrl: 'https://github.com/thadshanyaa',
   linkedinUrl: 'https://www.linkedin.com/in/thadshanyaa-arulkodeswaran-93a936358',
 };
